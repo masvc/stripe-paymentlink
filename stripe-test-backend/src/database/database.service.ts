@@ -54,8 +54,8 @@ export class DatabaseService implements OnModuleInit {
     // 商品データの作成
     await this.runQuery(`
       INSERT OR IGNORE INTO products (id, name, description, price, stripe_payment_link) VALUES 
-      (1, 'プレミアムプラン', '月額プレミアムサブスクリプション', 1000, 'https://buy.stripe.com/test_bJe8wObte8N891oaMaefC01'),
-      (2, 'スタンダードプラン', '月額スタンダードサブスクリプション', 500, 'https://buy.stripe.com/test_bJe6oG54Qe7s1yW5rQefC00')
+      (1, 'プレミアムプラン', '月額プレミアムサブスクリプション', 1000, 'https://buy.stripe.com/test_xxxxxxxxx'),
+      (2, 'スタンダードプラン', '月額スタンダードサブスクリプション', 500, 'https://buy.stripe.com/test_yyyyyyyyy')
     `);
   }
 

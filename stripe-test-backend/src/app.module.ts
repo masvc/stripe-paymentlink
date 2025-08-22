@@ -11,9 +11,13 @@ import { DatabaseService } from './database/database.service';
   imports: [
     ConfigModule.forRoot(),
     PassportModule,
-    JwtModule.register({
-      secret: 'your-secret-key', // 本番では環境変数にしてください
-      signOptions: { expiresIn: '24h' },
+    JwtModule.registerAsync({
+      imports: [ConfigModule],
+      useFactory: async (configService) => ({
+        secret: configService.get<string>('JWT_SECRET') || 'your-secret-key',
+        signOptions: { expiresIn: '24h' },
+      }),
+      inject: [ConfigModule],
     }),
     AuthModule,
     ProductsModule,

@@ -9,14 +9,14 @@ export class ProductsService {
       name: 'プレミアムプラン',
       description: '月額プレミアムサブスクリプション',
       price: 1000,
-      stripePaymentLink: 'https://buy.stripe.com/test_bJe8wObte8N891oaMaefC01',
+      stripePaymentLink: 'https://buy.stripe.com/test_xxxxxxxxx', // 実際のURLに更新してください
     },
     {
       id: 2,
       name: 'スタンダードプラン',
       description: '月額スタンダードサブスクリプション',
       price: 500,
-      stripePaymentLink: 'https://buy.stripe.com/test_bJe6oG54Qe7s1yW5rQefC00',
+      stripePaymentLink: 'https://buy.stripe.com/test_yyyyyyyyy', // 実際のURLに更新してください
     },
   ];
 
